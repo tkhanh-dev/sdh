@@ -7939,7 +7939,7 @@ v16.Race:AddButton({
     end
 });
 v16.Race:AddButton({
-    Title = "Cần Gạt",
+    Title = "Bay Đến Cần Gạt",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875));
@@ -7947,7 +7947,7 @@ v16.Race:AddButton({
     end
 });
 v16.Race:AddButton({
-    Title = "Chỗ Mua Gear",
+    Title = "Bay Đến Chỗ Mua Gear",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875));
@@ -7956,7 +7956,7 @@ v16.Race:AddButton({
 });
 local v56 = v16.Race:AddSection("Tộc");
 v16.Race:AddButton({
-    Title = "Cửa Tộc",
+    Title = "Bay Đến Tộc Của Bạn",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875));
@@ -8366,7 +8366,7 @@ v16.Shop:AddButton({
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt");
     end
 });
-local v56 = v16.Shop:AddSection("Khác");
+local v56 = v16.Shop:AddSection("Cửa Hàng");
 v16.Shop:AddButton({
     Title = "Đổi Chỉ Số",
     Description = "",
@@ -8593,7 +8593,7 @@ v16.Misc:AddButton({
         game:GetService("Players").LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible = true;
     end
 });
-local v56 = v16.Misc:AddSection("Khác");
+local v56 = v16.Misc:AddSection("Máy Chủ");
 local v151 = v16.Misc:AddToggle("ToggleRejoin", {
     Title = "Tham Gia Lại Máy Chủ",
     Description = "",
@@ -8614,7 +8614,7 @@ spawn(function()
         end
     end
 end);
-local v56 = v16.Misc:AddSection("Misc");
+local v56 = v16.Misc:AddSection("Khác");
 local function v152()
     local v382 = game:GetService("Lighting");
     if v382:FindFirstChild("BaseAtmosphere") then
