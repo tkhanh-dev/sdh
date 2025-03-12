@@ -2,7 +2,7 @@
 
 local v2 = {
     LoaderData = {
-        Name = shared.LoaderTitle or "Tiến hành tải script",
+        Name = shared.LoaderTitle or "Đanh tải script",
         Colors = shared.LoaderColors or {
             Main = Color3.fromRGB(0, 0, 0),
             Topic = Color3.fromRGB(200, 200, 200),
