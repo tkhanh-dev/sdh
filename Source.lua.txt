@@ -8,7 +8,7 @@ local v2 = {
             Topic = Color3.fromRGB(200, 200, 200),
             Title = Color3.fromRGB(255, 255, 255),
             LoaderBackground = Color3.fromRGB(40, 40, 40),
-            LoaderSplash = Color3.fromRGB(3, 252, 3)
+            LoaderSplash = Color3.fromRGB(66, 245, 209)
         }
     },
     Keyframes = shared.LoaderKeyFrames or {
@@ -76,7 +76,7 @@ local v7 = CreateObject("ImageLabel", {
     Name = "UserImage",
     Parent = v6,
     BackgroundTransparency = 1,
-    Image = "rbxassetid://13717478897",
+    Image = "rbxassetid://108174011307493",
     Position = UDim2.new(0, 15, 0, 10),
     Size = UDim2.new(0, 50, 0, 50)
 });
@@ -203,94 +203,6 @@ TweenObject(v6, 0.25, {
 });
 wait(0.25);
 v5:Destroy();
--- spawn(function()
---     while wait() do
---         function print()
---         end
---         function warn()
---         end
---         function error()
---         end
---         debug.traceback = function()
---             return "Traceback blocked";
---         end;
---         debug.info = function()
---             return "Info blocked";
---         end;
---         local v420 = getrawmetatable(game);
---         if (v420 and not v420.__metatable) then
---             setreadonly(v420, false);
---             local v658 = v420.__index;
---             local v659 = v420.__newindex;
---             v420.__index = function(v759, v760)
---                 if ((v760 == "debug") or (v760 == "getrawmetatable")) then
---                     error("Anti Skid: Tampering detected!");
---                 end
---                 return v658(v759, v760);
---             end;
---             v420.__newindex = function(v761, v762, v763)
---                 if ((v762 == "debug") or (v762 == "getrawmetatable")) then
---                     error("Anti Skid: Tampering detected!");
---                 end
---                 return v659(v761, v762, v763);
---             end;
---             setreadonly(v420, true);
---         end
---         local function v421()
---             local v568 = {
---                 "_G",
---                 "debug",
---                 "getgenv",
---                 "getrawmetatable",
---                 "setfenv",
---                 "loadstring",
---                 "hookfunction"
---             };
---             for v662, v663 in ipairs(v568) do
---                 local v664, v665 = pcall(function()
---                     return _G[v663];
---                 end);
---                 if (v664 and v665) then
---                     error("Anti Skid: Environment tampering detected!");
---                 end
---             end
---         end
---         local function v422()
---             local v569 = {
---                 getrawmetatable,
---                 setreadonly,
---                 getgenv,
---                 debug.getinfo,
---                 debug.getregistry
---             };
---             for v666, v667 in ipairs(v569) do
---                 if v667 then
---                     error("Anti Skid: Hook tampering detected!");
---                 end
---             end
---         end
---         local v423 = game:FindService("HttpService");
---         if v423 then
---             v423.RequestAsync = function()
---                 error("HTTP Requests Blocked");
---             end;
---             v423.GetAsync = function()
---                 error("HTTP Get Blocked");
---             end;
---             v423.PostAsync = function()
---                 error("HTTP Post Blocked");
---             end;
---         end
---         function collectgarbage()
---             error("GC Blocked");
---         end
---         os.time = function()
---             error("OS Time Blocked");
---         end;
---         pcall(v421);
---         pcall(v422);
---     end
--- end);
 local v14 = loadstring(game:HttpGet("https://raw.githubusercontent.com/obfalchx/testfluent/refs/heads/main/FluentTrau"))();
 local v15 = v14:CreateWindow({
     Title = "Shadow Hub",
@@ -2613,7 +2525,7 @@ v23.BorderSizePixel = 0;
 v23.Position = UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0);
 v23.Size = UDim2.new(0, 50, 0, 50);
 v23.Draggable = true;
-v23.Image = "http://www.roblox.com/asset/?id=13717478897";
+v23.Image = "http://www.roblox.com/asset/?id=108174011307493";
 v24.Parent = v23;
 v24.CornerRadius = UDim.new(0, 12);
 v25.Parent = v23;
@@ -8022,7 +7934,7 @@ end);
 v16.Race:AddButton({
     Title = "Dịch Chuyển Đến Đền Thời Gian",
     Description = "",
-    Callback = function()
+    Callback = function)
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875));
     end
 });
@@ -8044,7 +7956,7 @@ v16.Race:AddButton({
 });
 local v56 = v16.Race:AddSection("Tộc");
 v16.Race:AddButton({
-    Title = "Dịch Chuyển  Đến Tộc Của Bạn",
+    Title = "Cửa Tộc",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875));
@@ -8199,7 +8111,7 @@ spawn(function()
     end);
 end);
 local v146 = v16.Race:AddToggle("ToggleKillTrial", {
-    Title = "Giết Người Chơi Trong Trial",
+    Title = "Đánh Người Chơi Trong Trial",
     Description = "",
     Default = false
 });
@@ -8230,9 +8142,9 @@ spawn(function()
         end);
     end
 end);
-local v56 = v16.Race:AddSection("Huấn Luyện");
+local v56 = v16.Race:AddSection("Luyện Tập");
 local v147 = v16.Race:AddToggle("ToggleFarmRace", {
-    Title = "Cày Và Bật Tộc",
+    Title = "Cày Và Luyện Tộc",
     Description = "",
     Default = false
 });
@@ -8276,14 +8188,14 @@ end);
 v17.ToggleUpgrade:SetValue(false);
 local v56 = v16.Shop:AddSection("Khả Năng");
 v16.Shop:AddButton({
-    Title = "Nhảy",
+    Title = "Nhảy Trên Không",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki", "Geppo");
     end
 });
 v16.Shop:AddButton({
-    Title = "Haki Đấm",
+    Title = "Haki Vũ Trang",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki", "Buso");
@@ -8496,7 +8408,7 @@ v16.Shop:AddButton({
 });
 v16.Shop:AddButton({
     Title = "Đổi Tộc Draco",
-    Description = "Chỉ Ở Biển 3",
+    Description = "Chỉ đổi được khi bạn có tộc rồng",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(5661.5322265625, 1013.0907592773438, - 334.9649963378906));
         Tween2(CFrame.new(5814.42724609375, 1208.3267822265625, 884.5785522460938));
@@ -8516,7 +8428,7 @@ v16.Shop:AddButton({
     end
 });
 v16.Misc:AddButton({
-    Title = "Tham Gia Máy Chủ Lại",
+    Title = "Tham Gia Lại Máy Chủ ",
     Description = "",
     Callback = function()
         game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer);
@@ -8588,7 +8500,7 @@ function Hop()
     end
     v118();
 end
-local v56 = v16.Misc:AddSection("Đội");
+local v56 = v16.Misc:AddSection("Teams");
 v16.Misc:AddButton({
     Title = "Hải Tặc",
     Description = "",
@@ -8650,7 +8562,7 @@ local v150 = {
     "SECRET_ADMIN"
 };
 v16.Misc:AddButton({
-    Title = "Nhập Hết",
+    Title = "Nhập Tất Cả Code",
     Description = "",
     Callback = function()
         for v559, v560 in ipairs(v150) do
@@ -8675,7 +8587,7 @@ v16.Misc:AddButton({
 });
 local v56 = v16.Misc:AddSection("Thức Tỉnh");
 v16.Misc:AddButton({
-    Title = "Thức Tỉnh",
+    Title = "Chiêu Thức Tỉnh",
     Description = "",
     Callback = function()
         game:GetService("Players").LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible = true;
@@ -8683,7 +8595,7 @@ v16.Misc:AddButton({
 });
 local v56 = v16.Misc:AddSection("Khác");
 local v151 = v16.Misc:AddToggle("ToggleRejoin", {
-    Title = "Tham Gia Máy Chủ Lại",
+    Title = "Tham Gia Lại Máy Chủ",
     Description = "",
     Default = true
 });
@@ -8702,7 +8614,7 @@ spawn(function()
         end
     end
 end);
-local v56 = v16.Misc:AddSection("Sương");
+local v56 = v16.Misc:AddSection("Misc");
 local function v152()
     local v382 = game:GetService("Lighting");
     if v382:FindFirstChild("BaseAtmosphere") then
@@ -8804,9 +8716,9 @@ if Sea3 then
         end);
     end);
 end
-local v156 = v16.Sea:AddSection("Draco");
+local v156 = v16.Sea:AddSection("Tộc Rồng");
 local v157 = v16.Sea:AddToggle("ToggleBlazeEmber", {
-    Title = "Lụm Lửa Đỏ",
+    Title = "Nhặt Hoa Lửa",
     Description = "",
     Default = false
 });
@@ -8823,7 +8735,7 @@ spawn(function()
     end
 end);
 local v158 = v16.Sea:AddToggle("ToggleReceiveQuest", {
-    Title = "Nhận Nhiệm Vụ Lửa Đỏ",
+    Title = "Nhận Nhiệm Vụ Hoa Lửa",
     Description = "Bật Lên 1 Lần Là Nhận 1 Nhận Nữa Thì Tắt Bật Lại",
     Default = false
 });
@@ -8853,7 +8765,7 @@ v158:OnChanged(function(v388)
     end
 end);
 local v159 = v16.Sea:AddParagraph({
-    Title = "Trạng Thái Nhiệm Vụ Lửa Đỏ",
+    Title = "Trạng Thái Nhiệm Vụ Hoa Lửa",
     Content = ""
 });
 spawn(function()
@@ -8968,7 +8880,7 @@ v156:AddButton({
     end
 });
 local v164 = v16.Sea:AddToggle("ToggleCollectFireFlowers", {
-    Title = "Lụm Hoa Đỏ",
+    Title = "Nhặt Hoa Đỏ",
     Description = "",
     Default = false
 });
@@ -9028,11 +8940,11 @@ v165:OnChanged(function(v397)
     end
 end);
 local v166 = v16.Sea:AddParagraph({
-    Title = "Hoàn Thành Ải Draco V4 (Sớm Ra)",
+    Title = "Hoàn Thành Ải Draco V4 (Coming soon)",
     Content = ""
 });
 local v167 = v16.Sea:AddToggle("ToggleTrialTeleport", {
-    Title = "Bay Đến Cửa Trial Tộc Draco",
+    Title = "Bay Đến Cửa Trial Tộc Rồng",
     Description = "",
     Default = false
 });
@@ -9049,18 +8961,18 @@ spawn(function()
         end
     end
 end);
-local v168 = v16.Sea:AddSection("Đảo Dung Nham");
+local v168 = v16.Sea:AddSection("Đảo Núi Lửa");
 local v169 = v16.Sea:AddParagraph({
-    Title = "Trạng Thái Đảo Dung Nham",
+    Title = "Trạng Thái Đảo Núi Lửa",
     Content = ""
 });
 spawn(function()
     pcall(function()
         while wait() do
             if ggame:GetService("Workspace").Map:FindFirstChild("PrehistoricIsland") then
-                v169:SetDesc("Đảo Dung Nham: ✅️");
+                v169:SetDesc("Đảo Núi Lửa: ✅️");
             else
-                v169:SetDesc("Đảo Dung Nham: ❌️");
+                v169:SetDesc("Đảo Núi Lửa: ❌️");
             end
         end
     end);
@@ -9103,7 +9015,7 @@ v171:OnChanged(function(v401)
     _G.AutoDefendVolcano = v401;
 end);
 local v107 = v16.Sea:AddToggle("ToggleMelee", {
-    Title = "Dùng Melee",
+    Title = "Dùng Võ",
     Description = "",
     Default = false
 });
@@ -9111,7 +9023,7 @@ v107:OnChanged(function(v402)
     _G.UseMelee = v402;
 end);
 local v109 = v16.Sea:AddToggle("ToggleSword", {
-    Title = "Dùng Sword",
+    Title = "Dùng Kiếm",
     Description = "",
     Default = false
 });
@@ -9119,7 +9031,7 @@ v109:OnChanged(function(v403)
     _G.UseSword = v403;
 end);
 local v110 = v16.Sea:AddToggle("ToggleGun", {
-    Title = "Dùng Gun",
+    Title = "Dùng Súng",
     Description = "",
     Default = false
 });
@@ -9229,7 +9141,7 @@ spawn(function()
     end
 end);
 local v175 = v16.Sea:AddToggle("ToggleKillAura", {
-    Title = "Đánh Golems",
+    Title = "Đánh Golems Aura",
     Description = "",
     Default = false
 });
@@ -9256,7 +9168,7 @@ spawn(function()
     end
 end);
 local v176 = v16.Sea:AddToggle("ToggleCollectBone", {
-    Title = "Auto Lụm Xương",
+    Title = "Auto Nhặt Xương",
     Description = "",
     Default = false
 });
@@ -9275,7 +9187,7 @@ spawn(function()
     end
 end);
 local v177 = v16.Sea:AddToggle("ToggleCollectEgg", {
-    Title = "Auto Lụm Trứng",
+    Title = "Auto Nhặt Trứng",
     Description = "",
     Default = false
 });
@@ -9305,6 +9217,6 @@ spawn(function()
 end);
 v14:Notify({
     Title = "Shadow Hub",
-    Content = "Tải Xong",
+    Content = "Đã Tải Xong Script",
     Duration = 10
 });
