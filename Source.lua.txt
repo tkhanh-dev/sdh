@@ -206,7 +206,7 @@ v5:Destroy();
 local v14 = loadstring(game:HttpGet("https://raw.githubusercontent.com/obfalchx/testfluent/refs/heads/main/FluentTrau"))();
 local v15 = v14:CreateWindow({
     Title = "Shadow Hub",
-    SubTitle = "",
+    SubTitle = "by Khanh Shado",
     TabWidth = 160,
     Theme = "Dark",
     Acrylic = false,
