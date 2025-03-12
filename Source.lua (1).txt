@@ -7707,8 +7707,8 @@ spawn(function()
                     if v900:FindFirstChild("Island 1") then
                         _G.AutoNear = true;
                     end
-                    if (v900:FindFirstChild("Island 2") and not v357["Island 2"]) then
-                        Tween(v900:FindFirstChild("Island 2").CFrame);
+                    if (v900.GetChildren:FindFirstChild("Island 2") and not v357["Island 2"]) then
+                        Tween(v900.GetChildren:FindFirstChild("Island 2").CFrame);
                         v357["Island 2"] = true;
                         AutoNextIsland = false;
                         wait();
