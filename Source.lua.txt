@@ -7934,7 +7934,7 @@ end);
 v16.Race:AddButton({
     Title = "Dịch Chuyển Đến Đền Thời Gian",
     Description = "",
-    Callback = function)
+    Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875));
     end
 });
