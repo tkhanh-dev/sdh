@@ -2738,7 +2738,7 @@ spawn(function()
     end
 end);
 local v51 = v16.Main:AddToggle("ToggleCastleRaid", {
-    Title = "Đánh Hải Tặc",
+    Title = "Tự Động Đánh Hải Tặc",
     Description = "",
     Default = false
 });
@@ -2775,7 +2775,7 @@ spawn(function()
     end
 end);
 local v52 = v16.Main:AddToggle("ToggleHakiFortress", {
-    Title = "Bật Haki Màu Ở Pháo Đài",
+    Title = "Tự Động Bật Haki Màu Ở Pháo Đài",
     Description = "",
     Default = false
 });
@@ -3141,7 +3141,7 @@ end
 if Sea3 then
     local v490 = v16.Main:AddSection("Tư Lệnh Bánh");
     local v491 = v16.Main:AddParagraph({
-        Title = "Trạng Thái Nó Ra",
+        Title = "Trạng Thái Boss",
         Content = ""
     });
     spawn(function()
@@ -3234,7 +3234,7 @@ if Sea3 then
         end
     end);
     local v494 = v16.Main:AddToggle("ToggleDoughKing", {
-        Title = "Đánh Vua Bột",
+        Title = "Tự Động Đánh Vua Bột",
         Description = "",
         Default = false
     });
@@ -3274,7 +3274,7 @@ if Sea3 then
         end
     end);
     local v495 = v16.Main:AddToggle("ToggleSpawnCake", {
-        Title = "Triệu Hồi Tư Lệnh Bánh",
+        Title = "Triệu Hồi Tư Lệnh Bột",
         Description = "",
         Default = true
     });
@@ -3393,7 +3393,7 @@ elseif Sea3 then
     };
 end
 local v61 = v16.Main:AddDropdown("DropdownBoss", {
-    Title = "Chọn Trùm",
+    Title = "Chọn Boss",
     Description = "",
     Values = tableBoss,
     Multi = false,
@@ -3404,7 +3404,7 @@ v61:OnChanged(function(v253)
     _G.SelectBoss = v253;
 end);
 local v62 = v16.Main:AddToggle("ToggleAutoFarmBoss", {
-    Title = "Đánh Trùm",
+    Title = "Đánh Boss Đã Chọn",
     Description = "",
     Default = false
 });
@@ -3541,16 +3541,16 @@ spawn(function()
     end
 end);
 if Sea3 then
-    local v498 = v16.Sea:AddSection("Đảo Kitsune");
+    local v498 = v16.Sea:AddSection("Đảo Kit");
     local v499 = v16.Sea:AddParagraph({
-        Title = "Trạng Thái Đảo Kitsune",
+        Title = "Trạng Thái Đảo Kit",
         Content = ""
     });
     function UpdateKitsune()
         if game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland") then
-            v499:SetDesc("Đảo Kitsune: ✅️");
+            v499:SetDesc("Đảo Kit: ✅️");
         else
-            v499:SetDesc("Đảo Kitsune: ❌️");
+            v499:SetDesc("Đảo Kit: ❌️");
         end
     end
     spawn(function()
@@ -3561,7 +3561,7 @@ if Sea3 then
         end);
     end);
     local v500 = v16.Sea:AddToggle("ToggleEspKitsune", {
-        Title = "Định Vị Đảo Kitsune",
+        Title = "Định Vị Đảo Kit",
         Description = "",
         Default = false
     });
@@ -3605,7 +3605,7 @@ if Sea3 then
         end
     end
     local v501 = v16.Sea:AddToggle("ToggleTPKitsune", {
-        Title = "Bay Đến Đảo Kitsune",
+        Title = "Bay Đến Đảo Kit",
         Description = "",
         Default = false
     });
@@ -3962,7 +3962,7 @@ if Sea3 then
         end
     end);
     local v516 = v16.Sea:AddToggle("AutoComeTiki", {
-        Title = "Lái Thuyền Về Đảo Tiki",
+        Title = "Tự Động Lái Thuyền Về Đảo Tiki",
         Description = "",
         Default = false
     });
@@ -4004,7 +4004,7 @@ if Sea3 then
         end
     end);
     local v517 = v16.Sea:AddToggle("AutoComeHydra", {
-        Title = "Lái Thuyền Về Đảo Hydra",
+        Title = "Tự Động Lái Thuyền Về Đảo Hydra",
         Description = "",
         Default = false
     });
@@ -6223,7 +6223,7 @@ spawn(function()
     end
 end);
 local v87 = v16.Setting:AddToggle("ToggleAutoKen", {
-    Title = "Tự Động Bật Haki Quan Sât",
+    Title = "Tự Động Bật Haki Quan Sát",
     Description = "",
     Default = false
 });
@@ -6401,9 +6401,9 @@ v98:OnChanged(function(v284)
     SkillF = v284;
 end);
 v17.ToggleF:SetValue(true);
-local v99 = v16.Status:AddParagraph({
-    Title = "Thông Tin",
-    Content = "━━━━━━━━━━━━━━━━━━━━━\n" .. "Tên : " .. game.Players.LocalPlayer.DisplayName .. " (@" .. game.Players.LocalPlayer.Name .. ")\n" .. "Cấp : " .. game:GetService("Players").LocalPlayer.Data.Level.Value .. "\n" .. "Tiền : " .. game:GetService("Players").LocalPlayer.Data.Beli.Value .. "\n" .. "Điểm F : " .. game:GetService("Players").LocalPlayer.Data.Fragments.Value .. "\n" .. "Tiền Truy Nã : " .. game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value .. "\n" .. "Máu: " .. game.Players.LocalPlayer.Character.Humanoid.Health .. "/" .. game.Players.LocalPlayer.Character.Humanoid.MaxHealth .. "\n" .. "Năng Lượng : " .. game.Players.LocalPlayer.Character.Energy.Value .. "/" .. game.Players.LocalPlayer.Character.Energy.MaxValue .. "\n" .. "Tộc : " .. game:GetService("Players").LocalPlayer.Data.Race.Value .. "\n" .. "Trái : " .. game:GetService("Players").LocalPlayer.Data.DevilFruit.Value .. "\n" .. "━━━━━━━━━━━━━━━━━━━━━"
+local v99 = v16.Status:AddParagaph({
+    Title = "Bug Fix by Khanh Shado"
+    Content = ""
 });
 local v100 = v16.Status:AddParagraph({
     Title = "Thời Gian",
