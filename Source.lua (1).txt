@@ -7929,16 +7929,15 @@ spawn(function()
         end
     end);
 end);
-v16.Race:AddSection("Dịch Chuyển");
 v16.Race:AddButton({
-    Title = "Đền Thời Gian",
+    Title = "Dịch Chuyển Đến Đền Thời Gian",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875));
     end
 });
 v16.Race:AddButton({
-    Title = "Cần Gạt",
+    Title = "Dịch Chuyển Đến Cần Gạt",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875));
@@ -7946,7 +7945,7 @@ v16.Race:AddButton({
     end
 });
 v16.Race:AddButton({
-    Title = "Chỗ Mua Gear",
+    Title = "Dịch Chuyển Đến Chỗ Mua Gear",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(28286.35546875, 14895.3017578125, 102.62469482421875));
