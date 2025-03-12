@@ -7699,7 +7699,7 @@ spawn(function()
             pcall(function()
                 local v806 = game.Players.LocalPlayer.Character;
                 if (v806 and v806:FindFirstChild("HumanoidRootPart")) then
-                    local v900 = game:GetService("Workspace")['_WorldOrigin'].Locations.GetChildren;
+                    local v900 = game:GetService("Workspace")['_WorldOrigin'].Locations;
                     local v901 = v806.HumanoidRootPart.Position;
                     if (((v901 - Vector3.new(- 6438.73535, 250.645355, - 4501.50684)).Magnitude < 1) or ((v901 - Vector3.new(- 5017.40869, 314.844055, - 2823.0127)).Magnitude < 1)) then
                         v357 = {};
